@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE7734CB27D7906300C796A7 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = EE7734CA27D7906300C796A7 /* CombineExt */; };
+		EE7734CD27D790D400C796A7 /* Combine+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7734CC27D790D400C796A7 /* Combine+Utils.swift */; };
 		EEB3BE8027D65A97001D2EB6 /* SuperPayDashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB3BE7C27D65A97001D2EB6 /* SuperPayDashboardInteractor.swift */; };
 		EEB3BE8127D65A97001D2EB6 /* SuperPayDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB3BE7D27D65A97001D2EB6 /* SuperPayDashboardViewController.swift */; };
 		EEB3BE8227D65A97001D2EB6 /* SuperPayDashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB3BE7E27D65A97001D2EB6 /* SuperPayDashboardBuilder.swift */; };
@@ -51,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE7734CC27D790D400C796A7 /* Combine+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Utils.swift"; sourceTree = "<group>"; };
 		EEB3BE7C27D65A97001D2EB6 /* SuperPayDashboardInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardInteractor.swift; sourceTree = "<group>"; };
 		EEB3BE7D27D65A97001D2EB6 /* SuperPayDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardViewController.swift; sourceTree = "<group>"; };
 		EEB3BE7E27D65A97001D2EB6 /* SuperPayDashboardBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardBuilder.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7734CB27D7906300C796A7 /* CombineExt in Frameworks */,
 				F5829F6E26DB2DE900BFA8CD /* ModernRIBs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +169,7 @@
 				F5EAA231270B3A8F00EF2B70 /* UIView+Utils.swift */,
 				F5EAA21F270B39DC00EF2B70 /* PushModalPresentationController.swift */,
 				F5EAA22F270B3A7100EF2B70 /* RIBs+Utils.swift */,
+				EE7734CC27D790D400C796A7 /* Combine+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			name = MiniSuperApp;
 			packageProductDependencies = (
 				F5829F6D26DB2DE900BFA8CD /* ModernRIBs */,
+				EE7734CA27D7906300C796A7 /* CombineExt */,
 			);
 			productName = SuperRedApp;
 			productReference = F5829F5526DB2BC400BFA8CD /* MiniSuperApp.app */;
@@ -299,6 +305,7 @@
 			mainGroup = F5829F4C26DB2BC400BFA8CD;
 			packageReferences = (
 				F5829F6C26DB2DE900BFA8CD /* XCRemoteSwiftPackageReference "ModernRIBs" */,
+				EE7734C927D7906300C796A7 /* XCRemoteSwiftPackageReference "CombineExt" */,
 			);
 			productRefGroup = F5829F5626DB2BC400BFA8CD /* Products */;
 			projectDirPath = "";
@@ -352,6 +359,7 @@
 				EEB3BE8227D65A97001D2EB6 /* SuperPayDashboardBuilder.swift in Sources */,
 				F57F6AFE26DB4CD700C0117D /* RootTabBarController.swift in Sources */,
 				F57F6AEB26DB4A2700C0117D /* FinanceHomeInteractor.swift in Sources */,
+				EE7734CD27D790D400C796A7 /* Combine+Utils.swift in Sources */,
 				F5EAA21B270B395900EF2B70 /* AppHomeInteractor.swift in Sources */,
 				F57F6AE826DB4A2700C0117D /* FinanceHomeRouter.swift in Sources */,
 				F57F6AE926DB4A2700C0117D /* FinanceHomeViewController.swift in Sources */,
@@ -557,6 +565,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EE7734C927D7906300C796A7 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineExt";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
 		F5829F6C26DB2DE900BFA8CD /* XCRemoteSwiftPackageReference "ModernRIBs" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/DevYeom/ModernRIBs";
@@ -568,6 +584,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EE7734CA27D7906300C796A7 /* CombineExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE7734C927D7906300C796A7 /* XCRemoteSwiftPackageReference "CombineExt" */;
+			productName = CombineExt;
+		};
 		F5829F6D26DB2DE900BFA8CD /* ModernRIBs */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F5829F6C26DB2DE900BFA8CD /* XCRemoteSwiftPackageReference "ModernRIBs" */;
