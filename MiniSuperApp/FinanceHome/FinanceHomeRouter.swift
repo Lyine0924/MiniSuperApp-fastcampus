@@ -13,6 +13,7 @@ protocol FinanceHomeViewControllable: ViewControllable {
 final class FinanceHomeRouter: ViewableRouter<FinanceHomeInteractable, FinanceHomeViewControllable>, FinanceHomeRouting {
 	
 	private let superPayDashboardBuildable: SuperPayDashboardBuildable
+	private var superPayRouting: Routing?
   
   // TODO: Constructor inject child builder protocols to allow building children.
   init(
@@ -26,12 +27,18 @@ final class FinanceHomeRouter: ViewableRouter<FinanceHomeInteractable, FinanceHo
   }
 	
 	func attahSuperPayDashboard() {
+		
+		if superPayRouting != nil {
+			return
+		}
+		
 		let router = superPayDashboardBuildable.build(withListener: interactor)
 		
 		// add subview
 		let dashboard = router.viewControllable
 		viewController.addDashboard(dashboard)
 		
+		self.superPayRouting = router
 		attachChild(router)
 	}
 }
