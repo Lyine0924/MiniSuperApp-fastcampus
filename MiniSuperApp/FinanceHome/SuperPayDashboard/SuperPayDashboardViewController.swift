@@ -125,3 +125,11 @@ final class SuperPayDashboardViewController: UIViewController, SuperPayDashboard
 		
 	}
 }
+
+// MARK: - Extensions
+
+extension SuperPayDashboardViewController {
+	func updateBalance(_ balance: String) {
+		self.balanceAmountLabel.text = balance 
+	}
+}
