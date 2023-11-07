@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		EEB3BE8127D65A97001D2EB6 /* SuperPayDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB3BE7D27D65A97001D2EB6 /* SuperPayDashboardViewController.swift */; };
 		EEB3BE8227D65A97001D2EB6 /* SuperPayDashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB3BE7E27D65A97001D2EB6 /* SuperPayDashboardBuilder.swift */; };
 		EEB3BE8327D65A97001D2EB6 /* SuperPayDashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB3BE7F27D65A97001D2EB6 /* SuperPayDashboardRouter.swift */; };
+		EEED37242AFA6C2A005FCFFE /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEED37232AFA6C2A005FCFFE /* Formatter.swift */; };
 		F57EBE542738468700FE9319 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57EBE512738468700FE9319 /* UIImage+Utils.swift */; };
 		F57EBE552738468700FE9319 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57EBE522738468700FE9319 /* Array+Utils.swift */; };
 		F57EBE562738468700FE9319 /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57EBE532738468700FE9319 /* UITableView+Utils.swift */; };
@@ -58,6 +59,7 @@
 		EEB3BE7D27D65A97001D2EB6 /* SuperPayDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardViewController.swift; sourceTree = "<group>"; };
 		EEB3BE7E27D65A97001D2EB6 /* SuperPayDashboardBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardBuilder.swift; sourceTree = "<group>"; };
 		EEB3BE7F27D65A97001D2EB6 /* SuperPayDashboardRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardRouter.swift; sourceTree = "<group>"; };
+		EEED37232AFA6C2A005FCFFE /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		F57EBE512738468700FE9319 /* UIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
 		F57EBE522738468700FE9319 /* Array+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
 		F57EBE532738468700FE9319 /* UITableView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				EEB3BE7D27D65A97001D2EB6 /* SuperPayDashboardViewController.swift */,
 				EEB3BE7E27D65A97001D2EB6 /* SuperPayDashboardBuilder.swift */,
 				EEB3BE7F27D65A97001D2EB6 /* SuperPayDashboardRouter.swift */,
+				EEED37232AFA6C2A005FCFFE /* Formatter.swift */,
 			);
 			path = SuperPayDashboard;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				F5EAA22C270B3A4500EF2B70 /* TransportHomeInteractor.swift in Sources */,
 				F5829F7726DB34AA00BFA8CD /* AppRootInteractor.swift in Sources */,
 				F5EAA22D270B3A4500EF2B70 /* RideTypeView.swift in Sources */,
+				EEED37242AFA6C2A005FCFFE /* Formatter.swift in Sources */,
 				F5EAA219270B395900EF2B70 /* HomeWidgetView.swift in Sources */,
 				EEB3BE8227D65A97001D2EB6 /* SuperPayDashboardBuilder.swift in Sources */,
 				F57F6AFE26DB4CD700C0117D /* RootTabBarController.swift in Sources */,
