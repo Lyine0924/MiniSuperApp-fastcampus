@@ -53,9 +53,10 @@ final class SuperPayDashboardInteractor: PresentableInteractor<SuperPayDashboard
     override func didBecomeActive() {
         super.didBecomeActive()
         // TODO: Implement business logic here.
-			
 			dependency.balance.sink { [weak self] balance in
-				self?.presenter.updateBalance(String(balance))
+				self?.dependency.formatter.string(from: NSNumber(value: balance)).map {
+					self?.presenter.updateBalance($0)
+				}
 			}.store(in: &cancellables)
     }
 
