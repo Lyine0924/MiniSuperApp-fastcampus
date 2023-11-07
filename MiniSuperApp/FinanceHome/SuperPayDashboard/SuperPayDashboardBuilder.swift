@@ -5,6 +5,8 @@
 //  Created by Lyine on 2022/03/08.
 //
 
+import Foundation
+
 import ModernRIBs
 
 protocol SuperPayDashboardDependency: Dependency {
@@ -13,6 +15,7 @@ protocol SuperPayDashboardDependency: Dependency {
 }
 
 final class SuperPayDashboardComponent: Component<SuperPayDashboardDependency>, SuperPayDashboardInteractorDependency {
+	var formatter: NumberFormatter { Formatter.balanceFormatter }
 	var balance: ReadOnlyCurrentValuePublisher<Double> { dependency.balance }
 }
 

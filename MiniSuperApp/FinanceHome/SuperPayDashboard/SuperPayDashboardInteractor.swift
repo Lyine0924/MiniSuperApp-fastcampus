@@ -5,6 +5,7 @@
 //  Created by Lyine on 2022/03/08.
 //
 
+import Foundation
 import ModernRIBs
 import Combine
 
@@ -25,6 +26,7 @@ protocol SuperPayDashboardListener: AnyObject {
 
 protocol SuperPayDashboardInteractorDependency {
 	var balance: ReadOnlyCurrentValuePublisher<Double> { get }
+	var formatter: NumberFormatter { get }
 }
 
 final class SuperPayDashboardInteractor: PresentableInteractor<SuperPayDashboardPresentable>, SuperPayDashboardInteractable, SuperPayDashboardPresentableListener {
