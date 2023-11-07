@@ -1,6 +1,6 @@
 import ModernRIBs
 
-protocol FinanceHomeInteractable: Interactable, SuperPayDashboardListener {
+protocol FinanceHomeInteractable: Interactable, SuperPayDashboardListener, CardOnFileDashboardListener {
   var router: FinanceHomeRouting? { get set }
   var listener: FinanceHomeListener? { get set }
 }
@@ -14,14 +14,19 @@ final class FinanceHomeRouter: ViewableRouter<FinanceHomeInteractable, FinanceHo
 	
 	private let superPayDashboardBuildable: SuperPayDashboardBuildable
 	private var superPayRouting: Routing?
+	
+	private let cardOnFileDashboardBuidable: CardOnFileDashboardBuildable
+	private var cardOnFileRouting: Routing?
   
   // TODO: Constructor inject child builder protocols to allow building children.
   init(
 		interactor: FinanceHomeInteractable,
 		viewController: FinanceHomeViewControllable,
-		superPayDashboardBuildable: SuperPayDashboardBuildable
+		superPayDashboardBuildable: SuperPayDashboardBuildable,
+		cardOnFileDashboardBuidable: CardOnFileDashboardBuildable
 	) {
 		self.superPayDashboardBuildable = superPayDashboardBuildable
+		self.cardOnFileDashboardBuidable = cardOnFileDashboardBuidable
     super.init(interactor: interactor, viewController: viewController)
     interactor.router = self
   }
@@ -39,6 +44,21 @@ final class FinanceHomeRouter: ViewableRouter<FinanceHomeInteractable, FinanceHo
 		viewController.addDashboard(dashboard)
 		
 		self.superPayRouting = router
+		attachChild(router)
+	}
+	
+	func attachCardOnFileDashboard() {
+		if cardOnFileRouting != nil {
+			return
+		}
+		
+		let router = cardOnFileDashboardBuidable.build(withListener: interactor)
+		
+		let viewControllable = router.viewControllable
+		viewController.addDashboard(viewControllable)
+		
+		self.cardOnFileRouting = router
+		
 		attachChild(router)
 	}
 }
